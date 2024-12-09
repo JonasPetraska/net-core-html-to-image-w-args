@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace CoreHtmlToImage.Console
+namespace CoreHtmlToImageWArgs.Console
 {
     class Program
     {
