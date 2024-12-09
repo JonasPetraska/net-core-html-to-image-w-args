@@ -13,7 +13,7 @@
     <Authors>andrei-m-code, Jonas Petraška</Authors>
     <Copyright>© Free for all. Screw the people who commercialize such libraries</Copyright>
     <Version>1.0.1</Version>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
