@@ -1,4 +1,4 @@
-﻿namespace CoreHtmlToImage
+﻿namespace CoreHtmlToImageWArgs
 {
     /// <summary>
     /// Output image format

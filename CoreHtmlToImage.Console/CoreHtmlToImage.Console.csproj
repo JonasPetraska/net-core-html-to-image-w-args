@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoreHtmlToImage\CoreHtmlToImage.csproj" />
+    <ProjectReference Include="..\CoreHtmlToImage\CoreHtmlToImageWArgs.csproj" />
   </ItemGroup>
 
 </Project>

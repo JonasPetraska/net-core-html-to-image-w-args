@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreHtmlToImage", "CoreHtmlToImage\CoreHtmlToImage.csproj", "{463C9F1F-7E99-4538-AA22-04796CDF2A94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreHtmlToImageWArgs", "CoreHtmlToImage\CoreHtmlToImageWArgs.csproj", "{463C9F1F-7E99-4538-AA22-04796CDF2A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreHtmlToImage.Console", "CoreHtmlToImage.Console\CoreHtmlToImage.Console.csproj", "{9EF827C7-2076-4F0C-BBCA-51001D26E9EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreHtmlToImage.Console", "CoreHtmlToImage.Console\CoreHtmlToImage.Console.csproj", "{9EF827C7-2076-4F0C-BBCA-51001D26E9EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

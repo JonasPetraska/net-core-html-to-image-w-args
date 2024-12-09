@@ -3,17 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Title>.NET Core HTML to Image Converter</Title>
+    <Title>.NET Core HTML to Image Converter with ability to pass custom arguments</Title>
     <Description>Convert HTML string or URL to image</Description>
-    <PackageProjectUrl>https://github.com/andrei-m-code/net-core-html-to-image</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/andrei-m-code/net-core-html-to-image</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/JonasPetraska/net-core-html-to-image-w-args</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JonasPetraska/net-core-html-to-image-w-args</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>net-core html-to-image url-to-image net-standard</PackageTags>
-    <PackageReleaseNotes>Linux support added</PackageReleaseNotes>
-    <Authors>andrei-m-code</Authors>
+    <PackageReleaseNotes>Ability to pass custom args added</PackageReleaseNotes>
+    <Authors>andrei-m-code, Jonas Petraška</Authors>
     <Copyright>© Free for all. Screw the people who commercialize such libraries</Copyright>
-    <Version>1.0.6</Version>
-    <PackageVersion>1.0.6</PackageVersion>
+    <Version>1.0.0</Version>
+    <PackageVersion>1.0.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

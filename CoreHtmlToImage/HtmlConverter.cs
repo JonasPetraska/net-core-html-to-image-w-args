@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace CoreHtmlToImage
+namespace CoreHtmlToImageWArgs
 {
     /// <summary>
     /// Html Converter. Converts HTML string and URLs to image bytes
@@ -77,11 +77,11 @@ namespace CoreHtmlToImage
         /// <param name="format">Output image format</param>
         /// <param name="quality">Output image quality 1-100</param>
         /// <returns></returns>
-        public byte[] FromHtmlString(string html, int width = 1024, ImageFormat format = ImageFormat.Jpg, int quality = 100)
+        public byte[] FromHtmlString(string html, int width = 1024, ImageFormat format = ImageFormat.Jpg, int quality = 100, string customArgs = "")
         {
             var filename = Path.Combine(directory, $"{Guid.NewGuid()}.html");
             File.WriteAllText(filename, html);
-            var bytes = FromUrl(filename, width, format, quality);
+            var bytes = FromUrl(filename, width, format, quality, customArgs);
             File.Delete(filename);
             return bytes;
         }
@@ -94,7 +94,7 @@ namespace CoreHtmlToImage
         /// <param name="format">Output image format</param>
         /// <param name="quality">Output image quality 1-100</param>
         /// <returns></returns>
-        public byte[] FromUrl(string url, int width = 1024, ImageFormat format = ImageFormat.Jpg, int quality = 100)
+        public byte[] FromUrl(string url, int width = 1024, ImageFormat format = ImageFormat.Jpg, int quality = 100, string customArgs = "")
         {
             var imageFormat = format.ToString().ToLower();
             var filename = Path.Combine(directory, $"{Guid.NewGuid().ToString()}.{imageFormat}");
@@ -109,6 +109,9 @@ namespace CoreHtmlToImage
             {
                 args = $"--quality {quality} --width {width} -f {imageFormat} {url} \"{filename}\"";
             }
+
+            if (!String.IsNullOrEmpty(customArgs))
+                args += $" {customArgs}"; 
 
             Process process = Process.Start(new ProcessStartInfo(toolFilepath, args)
             {
