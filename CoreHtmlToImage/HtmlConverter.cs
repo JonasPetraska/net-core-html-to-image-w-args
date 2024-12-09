@@ -99,19 +99,19 @@ namespace CoreHtmlToImageWArgs
             var imageFormat = format.ToString().ToLower();
             var filename = Path.Combine(directory, $"{Guid.NewGuid().ToString()}.{imageFormat}");
 
+            if (!String.IsNullOrEmpty(customArgs))
+                customArgs += $" {customArgs.Trim()}";
+
             string args;
 
             if (IsLocalPath(url))
             {
-                args = $"--quality {quality} --width {width} -f {imageFormat} \"{url}\" \"{filename}\"";
+                args = $"--quality {quality} --width {width}{customArgs} -f {imageFormat} \"{url}\" \"{filename}\"";
             }
             else
             {
-                args = $"--quality {quality} --width {width} -f {imageFormat} {url} \"{filename}\"";
+                args = $"--quality {quality} --width {width}{customArgs} -f {imageFormat} {url} \"{filename}\"";
             }
-
-            if (!String.IsNullOrEmpty(customArgs))
-                args += $" {customArgs}"; 
 
             Process process = Process.Start(new ProcessStartInfo(toolFilepath, args)
             {
